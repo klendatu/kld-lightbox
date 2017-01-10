@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+	<title>KLD LightBox 1.0</title>	
+	<script src="jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="kld-lightbox.js" type="text/javascript"></script>
+	<link rel='stylesheet' href='kld-lightbox.css' type='text/css' media='all' />
+	
+	<style>
+	body {
+		background: white;
+		text-align: center;
+	}
+	
+	</style>
+</head>
+<body>
+
+	<!-- DECLENCHER LA LIGHTBOX AU CLIC SUR UN ELEMENT -->
+	<span data-lightbox="#lightbox_1">[LANCER LA LIGHTBOX 1]</span><br />
+	<span data-lightbox="#lightbox_2">[LANCER LA LIGHTBOX 2]</span>
+		
+	
+	
+	<!-- DECLENCHER LA LIGHTBOX AU CHARGEMENT DE LA PAGE -->
+	<script>
+	/*
+	$(window).load(function(){		
+		$('#lightbox_2').lightBox('trigger');
+	});
+	*/
+	</script>
+	
+	<!-- DECLENCHER LA LIGHTBOX APRES 5 SECONDES -->
+	<script>
+	/*
+	$(window).load(function(){
+		setTimeout(function(){
+			$('#lightbox_2').lightBox('trigger');
+	}, 5000);
+	});
+	*/
+	</script>
+	
+	
+	<!-- CODE MINIMAL POUR CHARGER LES LIGHTBOX -->
+	<script>
+	$(document).ready(function(){		
+		$('.LightBox').lightBox();
+	});		
+	</script>
+		
+	<div class="LightBox" id="lightbox_1"><span class="LightBox-close">&times;</span>
+		<div class="TextBox">
+			<h3 class="TextBox-title">Hello Dude. Here is the lightbox 1.</h3>
+		</div>
+	</div>
+	
+	<div class="LightBox" id="lightbox_2"><span class="LightBox-close">&times;</span>
+		<div class="TextBox">
+			<h3 class="TextBox-title">Hello Dude. Here is the lightbox 2.</h3>
+		</div>
+	</div>
+	
+	
+	
+	
+</body>
+</html>
